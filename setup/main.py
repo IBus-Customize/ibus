@@ -627,8 +627,8 @@ class Setup(object):
         theme_name_list = []
         gtk_theme_path = []
         for path in path_list:
-            gtk_theme_path.extend(glob.glob(path + "/*/*/gtk.css"))
-            gtk_theme_path.extend(glob.glob(path + "/*/*/gtk-dark.css"))
+            gtk_theme_path.extend(glob.glob(path + "/*/gtk-*/gtk.css"))
+            gtk_theme_path.extend(glob.glob(path + "/*/gtk-*/gtk-dark.css"))
         for path in gtk_theme_path:
             filename = os.path.basename(path)
             appendix = ""
